@@ -7,8 +7,11 @@
   <title>Blog Page</title>
 </head>
 <body>
-  <h3>{{ post.title }}</h3>
-  <img src="{{ post.image.url }}" alt="" width="300px">
-  <p>{{ post.body }}</p>
+  {% for post in posts%}
+    <a href="{{ post.get_absolute_url }}"><h3>{{ post.title }}</h3></a>
+    <img src="{{ post.image.url }}" alt="" width="300px">
+    {{ post.body |truncatewords:30|linebreaks }}
+    {{ post.publish | date:"d M Y"}}
+  {% endfor %}
 </body>
 </html>
