@@ -4,7 +4,8 @@ from . models import Post
 
 def index(request):
     posts = Post.objects.filter(status='published')
-    return render(request, 'blog/post/index.html', {'posts':posts})
+    page = 'blog'
+    return render(request, 'blog/post/index.html', {'posts':posts, 'page':page})
 
 def detail(request, year, month, day, post):
     post = get_object_or_404(Post, publish__year=year, publish__month=month,
