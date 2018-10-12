@@ -1,9 +1,11 @@
 {% extends 'blog/base.html' %}
 {% block content %}
+{% load static %}
     <section class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Александр</h1>
         <p class="lead text-muted">Cон и близость с женщиной более всего другого заставляют ощущать себя смертным, так как утомление и сладострастие проистекают от одной и той же слабости человеческой природы.</p>
+        <img src="{% static 'venom.jpg' %}" alt="venom" width="300px">
         <p>
           <a href="mailto:mixft@mail.ru" class="btn btn-primary my-2">Отправить нам письмо</a>
         </p>

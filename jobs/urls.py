@@ -4,5 +4,5 @@ import . views
 app_name = 'jobs'
 
 urlpatterns = [
-
+    
 ]

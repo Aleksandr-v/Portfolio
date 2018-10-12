@@ -1,0 +1,16 @@
+body h1,h3{
+  font-family: 'Comfortaa', cursive;
+}
+
+/* body p{
+  font-family: 'Gabriela', serif;
+} */
+
+.jumbotron{
+  padding-bottom: 1rem;
+  margin-bottom: 0rem;
+}
+
+a {
+  text-decoration: none !important;
+}

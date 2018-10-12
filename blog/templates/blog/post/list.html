@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<div class="bg-light">
+  <br>
+  <div class="container">
+  {% for post in posts%}
+
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{ post.image.url }}" class="rounded img-fluid" alt="...">
+      </div>
+      <div class="col-md-8 pl-5">
+        <h3 class="mb-0">
+          <a href="{{ post.get_absolute_url }}"><h3>{{ post.title }}</h3></a>
+        </h3>
+        <div class="mb-1 text-muted">{{ post.publish | date:"d M Y"}}</div>
+        <p class="card-text mb-auto">{{ post.body |truncatewords:30|linebreaks }}</p>
+        <a href="#">Подробнее</a>
+      </div>
+    </div>
+    <br>
+
+  {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
