@@ -16,7 +16,7 @@
         </h3>
         <div class="mb-1 text-muted">{{ post.publish | date:"d M Y"}}</div>
         <p class="card-text mb-auto">{{ post.body |truncatewords:30|linebreaks }}</p>
-        <a href="#">Подробнее</a>
+        <a href="{{ post.get_absolute_url }}">Подробнее</a>
       </div>
     </div>
     <br>
